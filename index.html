@@ -220,6 +220,9 @@ body::before{
 
 .member-card{
   transition:.3s;
+  aspect-ratio: 3 / 4;
+  overflow:hidden;
+  border-radius:18px;
 }
 
 .member-card:hover{
@@ -228,6 +231,8 @@ body::before{
 
 .member-card img{
   width:100%;
+  height:100%;
+  object-fit:cover;
   display:block;
   border-radius:18px;
   box-shadow:
