@@ -1,287 +1,90 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>九州アクセラレーター2026</title>
+<div class="hero-inner">
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --gold:#f5c842;
-  --gold-dark:#b8860b;
-  --bg:#05070d;
-  --text:#fffdf5;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  background:
-    radial-gradient(circle at center,#14213d 0%,#05070d 70%);
-  color:var(--text);
-  font-family:'Noto Sans JP',sans-serif;
-  overflow-x:hidden;
-}
-
-/* 背景エフェクト */
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle,rgba(245,200,66,.7) 1px,transparent 1px);
-  background-size:3px 3px;
-  opacity:.15;
-  pointer-events:none;
-}
-
-/* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:3rem 1.5rem;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:'';
-  position:absolute;
-  width:1200px;
-  height:1200px;
-  background:
-    radial-gradient(circle,rgba(245,200,66,.35) 0%,transparent 70%);
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  filter:blur(40px);
-}
-
-.hero-inner{
-  position:relative;
-  z-index:2;
-  text-align:center;
-  max-width:1000px;
-}
-
-.main-title{
-  font-family:'Noto Serif JP',serif;
-  font-size:clamp(3rem,9vw,7rem);
-  font-weight:900;
-  line-height:1.05;
-  margin-bottom:1rem;
-  color:#fff;
-  text-shadow:
-    0 0 20px rgba(255,255,255,.25),
-    0 0 40px rgba(245,200,66,.25);
-}
-
-.subcopy{
-  font-size:clamp(.95rem,2vw,1.2rem);
-  letter-spacing:.08em;
-  margin-bottom:2rem;
-  color:rgba(255,255,255,.85);
-}
-
-.year{
-  font-family:'Cinzel',serif;
-  font-size:clamp(4rem,12vw,8rem);
-  color:var(--gold);
-  font-weight:700;
-  line-height:1;
-  margin-bottom:1rem;
-  text-shadow:
-    0 0 20px rgba(245,200,66,.5),
-    0 0 60px rgba(245,200,66,.3);
-}
-
-.catch{
-  font-family:'Noto Serif JP',serif;
-  font-size:clamp(2rem,6vw,4.5rem);
-  font-weight:900;
-  line-height:1.25;
-  margin-bottom:3rem;
-}
-
-.catch span{
-  color:var(--gold);
-}
-
-.lead{
-  max-width:780px;
-  margin:0 auto 4rem;
-  line-height:2;
-  font-size:1rem;
-  color:rgba(255,255,255,.78);
-}
-
-/* INFO */
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:1.2rem;
-  margin-top:2rem;
-}
-
-.info-card{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(245,200,66,.25);
-  border-radius:16px;
-  padding:1.5rem;
-  backdrop-filter:blur(10px);
-  transition:.3s;
-}
-
-.info-card:hover{
-  transform:translateY(-5px);
-  border-color:var(--gold);
-  box-shadow:0 0 30px rgba(245,200,66,.15);
-}
-
-.info-label{
-  font-size:.8rem;
-  letter-spacing:.18em;
-  color:var(--gold);
-  margin-bottom:.8rem;
-}
-
-.info-value{
-  font-size:1.05rem;
-  line-height:1.8;
-  font-weight:700;
-}
-
-/* CTA */
-.cta{
-  margin-top:4rem;
-}
-
-.cta-btn{
-  display:inline-block;
-  background:linear-gradient(135deg,var(--gold),#ffdf6e);
-  color:#111;
-  text-decoration:none;
-  font-weight:900;
-  font-size:1.1rem;
-  padding:1.1em 2.8em;
-  border-radius:999px;
-  transition:.3s;
-  box-shadow:
-    0 0 20px rgba(245,200,66,.35);
-}
-
-.cta-btn:hover{
-  transform:translateY(-3px) scale(1.02);
-  box-shadow:
-    0 0 40px rgba(245,200,66,.5);
-}
-
-.note{
-  margin-top:1rem;
-  font-size:.85rem;
-  color:rgba(255,255,255,.45);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:2rem;
-  font-size:.8rem;
-  color:rgba(255,255,255,.3);
-}
-</style>
-</head>
-
-<body>
-
-<section class="hero">
-
-  <div class="hero-inner">
-
-    <div class="main-title">
-      九州<br>
-      アクセラレーター
-    </div>
-
-    <div class="subcopy">
-      九州の志、宮崎に集う。挑戦を加速させる、はじまりのピッチ
-    </div>
-
-    <div class="year">2026</div>
-
-    <div class="catch">
-      つながりが、<br>
-      <span>未来を加速する。</span>
-    </div>
-
-    <p class="lead">
-      ここから、九州の挑戦を日本へ、そして世界へ。<br>
-      起業家・支援者・挑戦したい人が交差し、<br>
-      新しい未来を生み出す加速装置が宮崎で始まる。
-    </p>
-
-    <div class="info-grid">
-
-      <div class="info-card">
-        <div class="info-label">DATE</div>
-        <div class="info-value">
-          2026.6.20（土）
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-label">TIME</div>
-        <div class="info-value">
-          15:00〜18:00 ピッチ<br>
-          18:00〜 懇親会
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-label">PLACE</div>
-        <div class="info-value">
-          MOC（みやざきイノベーション共創拠点）<br>
-          宮崎市広島1丁目5番13号<br>
-          HAROW高千穂通 1F
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-label">FOR</div>
-        <div class="info-value">
-          起業家・支援者・<br>
-          挑戦したいすべての人へ
-        </div>
-      </div>
-
-    </div>
-
-    <div class="cta">
-      <a href="https://forms.gle/5arnJNGhE8SdRUcN8" class="cta-btn" target="_blank">
-        参加申し込みはこちら →
-      </a>
-
-      <div class="note">
-        主催：SUNAO / 株式会社SUNAO製薬<br>
-        共催：MOC / 一般社団法人 宮崎オープンシティ推進協議会
-      </div>
-    </div>
-
+  <div class="main-title">
+    九州<br>
+    アクセラレーター
   </div>
 
-</section>
+  <div class="subcopy">
+    九州の志、宮崎に集う。挑戦を加速させる、はじまりのピッチ
+  </div>
 
-<footer>
-© 九州アクセラレーター2026
-</footer>
+  <style>
+  .cta-btn{
+    display:inline-block;
+    background:linear-gradient(135deg,#ffd95a,#f5c842,#ffb300);
+    color:#111;
+    text-decoration:none;
+    font-weight:900;
+    font-size:clamp(1.2rem,3vw,1.7rem);
+    padding:1.3em 3.8em;
+    border-radius:999px;
+    transition:.3s;
+    box-shadow:
+      0 0 20px rgba(245,200,66,.5),
+      0 0 60px rgba(245,200,66,.35);
+    border:3px solid rgba(255,255,255,.25);
+    letter-spacing:.08em;
+    position:relative;
+    overflow:hidden;
+    animation:pulseGlow 2s infinite;
+    margin:2rem 0 3rem;
+  }
 
-</body>
-</html>
+  .cta-btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:70%;
+    height:100%;
+    background:linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.45),
+      transparent
+    );
+    transition:.6s;
+  }
+
+  .cta-btn:hover::before{
+    left:140%;
+  }
+
+  .cta-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:
+      0 0 40px rgba(245,200,66,.75),
+      0 0 100px rgba(245,200,66,.45);
+  }
+
+  @keyframes pulseGlow{
+    0%,100%{
+      transform:scale(1);
+    }
+    50%{
+      transform:scale(1.03);
+    }
+  }
+  </style>
+
+  <div>
+    <a href="https://forms.gle/5arnJNGhE8SdRUcN8" class="cta-btn" target="_blank">
+      参加申し込みはこちら →
+    </a>
+  </div>
+
+  <div class="year">2026</div>
+
+  <div class="catch">
+    つながりが、<br>
+    <span>未来を加速する。</span>
+  </div>
+
+  <p class="lead">
+    ここから、九州の挑戦を日本へ、そして世界へ。<br>
+    起業家・支援者・挑戦したい人が交差し、<br>
+    新しい未来を生み出す加速装置が宮崎で始まる。
+  </p>
+
+</div>
