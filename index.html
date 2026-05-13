@@ -211,11 +211,27 @@ body::before{
   color:rgba(255,255,255,.82);
 }
 
-footer{
-  text-align:center;
-  padding:3rem 1rem;
-  font-size:.8rem;
-  color:rgba(255,255,255,.3);
+.member-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:2rem;
+  margin-top:3rem;
+}
+
+.member-card{
+  transition:.3s;
+}
+
+.member-card:hover{
+  transform:translateY(-6px) scale(1.02);
+}
+
+.member-card img{
+  width:100%;
+  display:block;
+  border-radius:18px;
+  box-shadow:
+    0 0 30px rgba(245,200,66,.15);
 }
 </style>
 </head>
