@@ -256,10 +256,11 @@ footer{
 
 @media (max-width: 768px){
   body{
-    background-attachment: scroll; /* スマホのドアップバグを防止 */
+    background-attachment: scroll;
     background-position: center top;
-    background-size: 100% auto;    /* 横幅にジャストフィットさせ、宇宙の広がりをスマホでも維持 */
-    background-color: #05070d;     /* 画像の切れ目を自然な闇色でカバー */
+    background-size: 100% auto;
+    background-repeat: no-repeat; /* リピート（繰り返し）を完全に禁止 */
+    background-color: #05070d;    /* 画像の切れ目より下を自然な闇色で統一 */
   }
 
   .section{
