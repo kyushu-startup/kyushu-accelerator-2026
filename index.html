@@ -256,8 +256,10 @@ footer{
 
 @media (max-width: 768px){
   body{
-    background-attachment: scroll;
+    background-attachment: scroll; /* スマホのドアップバグを防止 */
     background-position: center top;
+    background-size: 100% auto;    /* 横幅にジャストフィットさせ、宇宙の広がりをスマホでも維持 */
+    background-color: #05070d;     /* 画像の切れ目を自然な闇色でカバー */
   }
 
   .section{
@@ -307,8 +309,8 @@ footer{
     </div>
 
     <p class="lead">
-      ここから、九州の挑戦を日本へ、そこで世界へ。<br>
-      起業家・スタートアップ・支援者・事業会社・学生が交させ、<br>
+      ここから、九州の挑戦を日本へ、そして世界へ。<br>
+      起業家・スタートアップ・支援者・事業会社・学生が交差し、<br>
       新たな共創や事業加速のきっかけを生み出す加速装置が宮崎で始まる。
     </p>
 
