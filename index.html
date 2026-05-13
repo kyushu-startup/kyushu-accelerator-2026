@@ -20,10 +20,11 @@
   padding:0;
   box-sizing:border-box;
 }
-
 body{
   background:
-    radial-gradient(circle at center,#14213d 0%,#05070d 70%);
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.82)),
+    url('ChatGPT Image 2026年5月13日 22_10_45.png') center/cover fixed;
+
   color:var(--text);
   font-family:'Noto Sans JP',sans-serif;
   overflow-x:hidden;
@@ -36,7 +37,7 @@ body::before{
   background:
     radial-gradient(circle,rgba(245,200,66,.7) 1px,transparent 1px);
   background-size:3px 3px;
-  opacity:.12;
+  opacity:.04;
   pointer-events:none;
 }
 
@@ -56,7 +57,7 @@ body::before{
   width:1200px;
   height:1200px;
   background:
-    radial-gradient(circle,rgba(245,200,66,.25) 0%,transparent 70%);
+    radial-gradient(circle,rgba(245,200,66,.15) 0%,transparent 70%);
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
