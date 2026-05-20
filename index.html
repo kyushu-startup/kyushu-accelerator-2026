@@ -22,7 +22,8 @@
 <meta name="twitter:title" content="九州アクセラレーター2026">
 <meta name="twitter:description" content="つながりが、未来を加速する。">
 <meta name="twitter:image" content="https://kyushu-startup.github.io/kyushu-accelerator-2026/ogp.jpeg">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -37,11 +38,11 @@
   padding:0;
   box-sizing:border-box;
 }
+
 body{
   background:
     linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.82)),
     url('hero-bg.png') center/cover fixed;
-
   color:var(--text);
   font-family:'Noto Sans JP',sans-serif;
   overflow-x:hidden;
@@ -218,6 +219,78 @@ body::before{
   word-break: break-all;
 }
 
+/* ピッチ予定者 */
+.pitch-section{
+  padding-top:5rem;
+}
+
+.pitch-title{
+  font-size:clamp(1.8rem,4vw,3rem);
+}
+
+.pitch-note{
+  display:inline-block;
+  margin-top:.75rem;
+  font-size:.85rem;
+  color:rgba(255,255,255,.55);
+}
+
+.pitch-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.2rem;
+  margin-top:3rem;
+}
+
+.pitch-card{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+  border:1px solid rgba(245,200,66,.22);
+  border-radius:18px;
+  padding:1.5rem;
+  backdrop-filter:blur(10px);
+  min-height:230px;
+  transition:.3s;
+}
+
+.pitch-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(245,200,66,.55);
+  box-shadow:0 0 28px rgba(245,200,66,.12);
+}
+
+.pitch-meta{
+  display:inline-block;
+  color:#111;
+  background:linear-gradient(135deg,var(--gold),#ffdf6e);
+  font-size:.75rem;
+  font-weight:900;
+  padding:.35em .85em;
+  border-radius:999px;
+  margin-bottom:1rem;
+}
+
+.pitch-card h3{
+  font-family:'Noto Serif JP',serif;
+  font-size:1.25rem;
+  line-height:1.45;
+  margin-bottom:.45rem;
+  color:#fff;
+}
+
+.pitch-speaker{
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:1rem;
+  line-height:1.6;
+}
+
+.pitch-desc{
+  color:rgba(255,255,255,.78);
+  line-height:1.85;
+  font-size:.95rem;
+}
+
 .concept-box{
   max-width:850px;
   margin:0 auto;
@@ -269,8 +342,13 @@ footer{
     background-attachment: scroll;
     background-position: center top;
     background-size: 100% auto;
-    background-repeat: no-repeat; /* リピート（繰り返し）を完全に禁止 */
-    background-color: #05070d;    /* 画像の切れ目より下を自然な闇色で統一 */
+    background-repeat: no-repeat;
+    background-color: #05070d;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:4rem 1rem 3rem;
   }
 
   .section{
@@ -282,10 +360,37 @@ footer{
     padding:1em 2em;
   }
 
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+
+  .pitch-grid{
+    grid-template-columns:1fr;
+    gap:1rem;
+  }
+
+  .pitch-card{
+    min-height:auto;
+    padding:1.25rem;
+  }
+
+  .pitch-card h3{
+    font-size:1.15rem;
+  }
+
+  .pitch-desc{
+    font-size:.92rem;
+  }
+
   .concept-box{
     padding:2rem 1.2rem;
     font-size:1rem;
     line-height:2;
+  }
+
+  .member-grid{
+    grid-template-columns:1fr;
+    gap:1.4rem;
   }
 }
 </style>
@@ -394,6 +499,103 @@ footer{
         （詳細は後日ご案内します）
       </div>
     </div>
+
+  </div>
+
+</section>
+
+<section class="section pitch-section">
+
+  <h2 class="section-title pitch-title">ピッチ予定者</h2>
+
+  <p class="section-sub">
+    九州各地から、地域課題・ヘルスケア・食・不動産・事業承継など、<br>
+    多様なテーマに挑む起業家・事業者が登壇予定です。<br>
+    <span class="pitch-note">※登壇者・事業内容は追加・変更となる可能性があります。</span>
+  </p>
+
+  <div class="pitch-grid">
+
+    <article class="pitch-card">
+      <div class="pitch-meta">宮崎</div>
+      <h3>ベルコード</h3>
+      <p class="pitch-speaker">大西 将也</p>
+      <p class="pitch-desc">
+        世界初。いつでもどこでも健やかな空間を創り出す「ヒートシート」の提供。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">鹿児島</div>
+      <h3>ルオーナペットクリニック</h3>
+      <p class="pitch-speaker">浜崎なお</p>
+      <p class="pitch-desc">
+        猫の顎下のニキビ・汚れをとるクレンジング剤の開発および販売。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">鹿児島</div>
+      <h3>株式会社Alvirea</h3>
+      <p class="pitch-speaker">堀之内 元喜</p>
+      <p class="pitch-desc">
+        糖尿病患者でも食べられる低糖質かつ腸内環境改善が可能なスイーツの開発および販売。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">鹿児島</div>
+      <h3>株式会社Alteonus</h3>
+      <p class="pitch-speaker">山内 倫裕</p>
+      <p class="pitch-desc">
+        食べる口腔ケア商品「歯磨きスイーツ」。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">大分</div>
+      <h3>MYSHOKU</h3>
+      <p class="pitch-speaker">本田 颯人</p>
+      <p class="pitch-desc">
+        アレっ子が作るアレっ子のためのサービス。飲食店のアレルギー対応情報を見える化。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">大分</div>
+      <h3>株式会社クリエイド</h3>
+      <p class="pitch-speaker">近藤 洋俊</p>
+      <p class="pitch-desc">
+        障がい者や車いすユーザーが安心して暮らせる賃貸住宅を仲介する、「心のバリアフリー」を重視した不動産会社。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">福岡</div>
+      <h3>合同会社ボトルドローカル</h3>
+      <p class="pitch-speaker">高橋 米彦</p>
+      <p class="pitch-desc">
+        地域資源を活用したクラフトジンの企画・販売。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">宮崎</div>
+      <h3>ウィズダムプラス</h3>
+      <p class="pitch-speaker">川崎 悠人</p>
+      <p class="pitch-desc">
+        世界最小サブミクロンレベル、直径0.2μmのミストを発生する噴霧装置。
+      </p>
+    </article>
+
+    <article class="pitch-card">
+      <div class="pitch-meta">宮崎</div>
+      <h3>ライトライト</h3>
+      <p class="pitch-speaker">登壇者調整中</p>
+      <p class="pitch-desc">
+        事業承継プラットフォーム。
+      </p>
+    </article>
 
   </div>
 
