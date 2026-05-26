@@ -219,6 +219,7 @@ body::before{
   word-break: break-all;
 }
 
+/* ピッチ予定者 */
 .pitch-section{
   padding-top:5rem;
 }
@@ -289,10 +290,219 @@ body::before{
   line-height:1.85;
   font-size:.95rem;
 }
+
+.concept-box{
+  max-width:850px;
+  margin:0 auto;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(245,200,66,.18);
+  border-radius:20px;
+  padding:3rem;
+  line-height:2.2;
+  text-align:center;
+  font-size:1.05rem;
+  color:rgba(255,255,255,.82);
+}
+
+.member-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:2rem;
+  margin-top:3rem;
+}
+
+.member-card{
+  transition:.3s;
+  border-radius:18px;
+}
+
+.member-card:hover{
+  transform:translateY(-6px) scale(1.02);
+}
+
+.member-card img{
+  width:100%;
+  height:auto !important;
+  object-fit:contain !important;
+  display:block;
+  border-radius:18px;
+  box-shadow:
+    0 0 30px rgba(245,200,66,.15);
+}
+
+footer{
+  text-align:center;
+  padding:3rem 1rem;
+  font-size:.8rem;
+  color:rgba(255,255,255,.3);
+}
+
+@media (max-width: 768px){
+  body{
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #05070d;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:4rem 1rem 3rem;
+  }
+
+  .section{
+    padding:4rem 1rem;
+  }
+
+  .cta-btn{
+    font-size:1rem;
+    padding:1em 2em;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+
+  .pitch-grid{
+    grid-template-columns:1fr;
+    gap:1rem;
+  }
+
+  .pitch-card{
+    min-height:auto;
+    padding:1.25rem;
+  }
+
+  .pitch-card h3{
+    font-size:1.15rem;
+  }
+
+  .pitch-desc{
+    font-size:.92rem;
+  }
+
+  .concept-box{
+    padding:2rem 1.2rem;
+    font-size:1rem;
+    line-height:2;
+  }
+
+  .member-grid{
+    grid-template-columns:1fr;
+    gap:1.4rem;
+  }
+}
 </style>
 </head>
 
 <body>
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="main-title">
+      九州<br>
+      アクセラレーター
+    </div>
+
+    <div class="subcopy">
+      九州の志、宮崎に集う。挑戦を加速させる、はじまりのピッチ
+    </div>
+
+    <div class="cta-top">
+      <a href="https://forms.gle/5arnJNGhE8SdRUcN8" class="cta-btn" target="_blank">
+        参加申し込みはこちら →
+      </a>
+    </div>
+
+    <div class="year">2026</div>
+
+    <div class="catch">
+      つながりが、<br>
+      <span>未来を加速する。</span>
+    </div>
+
+    <p class="lead">
+      ここから、九州の挑戦を日本へ、そして世界へ。<br>
+      起業家・スタートアップ・支援者・事業会社・学生が交差し、<br>
+      新たな共創や事業加速のきっかけを生み出す加速装置が宮崎で始まる。
+    </p>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <h2 class="section-title">イベント概要</h2>
+
+  <p class="section-sub">
+    九州各地の挑戦者が集まり、つながり、加速する。<br>
+    起業家・支援者・地域プレイヤーが交差する共創イベント。
+  </p>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+      <div class="info-label">DATE</div>
+      <div class="info-value">
+        2026年6月20日（土）
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-label">TIME</div>
+      <div class="info-value">
+        15:00〜18:00 ピッチイベント<br>
+        18:00〜19:30 懇親会
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-label">PLACE</div>
+      <div class="info-value">
+        MOC（みやざきイノベーション共創拠点）<br>
+        宮崎市広島1丁目5番13号<br>
+        HAROW高千穂通 1F
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-label">FEE</div>
+      <div class="info-value">
+        イベント参加：無料<br>
+        懇親会：4,000円（実費）
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-label">DEADLINE</div>
+      <div class="info-value">
+        参加申し込み締切：<br>
+        2026年6月17日（水）
+      </div>
+    </div>
+    
+    <div class="info-card">
+      <div class="info-label">TARGET</div>
+      <div class="info-value">
+        起業家・スタートアップ・支援者・事業会社・学生・地域プレイヤー
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-label">AFTER PARTY</div>
+      <div class="info-value">
+        二次会を別会場にて予定<br>
+        （詳細は後日ご案内します）
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
 <section class="section pitch-section">
 
@@ -384,15 +594,6 @@ body::before{
       <p class="pitch-speaker">松田 稜平氏</p>
       <p class="pitch-desc">
         事業承継マッチングプラットフォームrelay（リレイ）」の運営。
-      </p>
-    </article>
-
-    <article class="pitch-card">
-      <div class="pitch-meta">福岡</div>
-      <h3>株式会社BabuuTalk</h3>
-      <p class="pitch-speaker">取締役 堀田 一希氏</p>
-      <p class="pitch-desc">
-        AI対話技術を活用した高齢者向け見守りプラットフォームの企画・開発・運営。
       </p>
     </article>
 
